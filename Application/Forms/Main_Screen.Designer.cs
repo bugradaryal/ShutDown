@@ -59,7 +59,7 @@ namespace AutoShutdown
             this.userControl22.BorderColor = System.Drawing.Color.SandyBrown;
             this.userControl22.ButtonColor = System.Drawing.Color.Peru;
             this.userControl22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.userControl22.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.userControl22.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.userControl22.ForeColor = System.Drawing.Color.Orange;
             this.userControl22.Location = new System.Drawing.Point(174, 313);
             this.userControl22.Name = "userControl22";
@@ -82,7 +82,7 @@ namespace AutoShutdown
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(12, 321);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 21);
@@ -92,7 +92,7 @@ namespace AutoShutdown
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(88, 321);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(33, 21);
@@ -112,13 +112,14 @@ namespace AutoShutdown
             this.userControl14.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.userControl14.BottomBorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.userControl14.BottomBorderFocusColor = System.Drawing.Color.Gold;
-            this.userControl14.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.userControl14.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             this.userControl14.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.userControl14.Location = new System.Drawing.Point(12, 216);
             this.userControl14.Name = "userControl14";
             this.userControl14.Size = new System.Drawing.Size(78, 27);
             this.userControl14.TabIndex = 5;
             this.userControl14.Text = "Dakika";
+            this.userControl14.MouseClick += new System.Windows.Forms.MouseEventHandler(this.userControl14_MouseClick);
             this.userControl14.TextChanged += new System.EventHandler(this.userControl14_TextChanged);
             this.userControl14.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.userControl14_KeyPress);
             // 
@@ -128,13 +129,14 @@ namespace AutoShutdown
             this.userControl15.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.userControl15.BottomBorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.userControl15.BottomBorderFocusColor = System.Drawing.Color.Gold;
-            this.userControl15.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.userControl15.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             this.userControl15.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.userControl15.Location = new System.Drawing.Point(108, 216);
             this.userControl15.Name = "userControl15";
             this.userControl15.Size = new System.Drawing.Size(78, 27);
             this.userControl15.TabIndex = 6;
             this.userControl15.Text = "Saat";
+            this.userControl15.MouseClick += new System.Windows.Forms.MouseEventHandler(this.userControl15_MouseClick);
             this.userControl15.TextChanged += new System.EventHandler(this.userControl15_TextChanged);
             this.userControl15.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.userControl15_KeyPress);
             // 
@@ -144,20 +146,21 @@ namespace AutoShutdown
             this.userControl16.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.userControl16.BottomBorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.userControl16.BottomBorderFocusColor = System.Drawing.Color.Gold;
-            this.userControl16.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.userControl16.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             this.userControl16.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.userControl16.Location = new System.Drawing.Point(207, 216);
             this.userControl16.Name = "userControl16";
             this.userControl16.Size = new System.Drawing.Size(78, 27);
             this.userControl16.TabIndex = 7;
             this.userControl16.Text = "Yıl";
+            this.userControl16.MouseClick += new System.Windows.Forms.MouseEventHandler(this.userControl16_MouseClick);
             this.userControl16.TextChanged += new System.EventHandler(this.userControl16_TextChanged);
             this.userControl16.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.userControl16_KeyPress);
             // 
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBox6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.checkBox6.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.checkBox6.Location = new System.Drawing.Point(9, 259);
             this.checkBox6.Name = "checkBox6";
@@ -170,7 +173,7 @@ namespace AutoShutdown
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBox5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.checkBox5.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.checkBox5.Location = new System.Drawing.Point(150, 259);
             this.checkBox5.Name = "checkBox5";
@@ -183,7 +186,7 @@ namespace AutoShutdown
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.checkBox4.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.checkBox4.Location = new System.Drawing.Point(9, 290);
             this.checkBox4.Name = "checkBox4";
@@ -200,7 +203,7 @@ namespace AutoShutdown
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.button3.Location = new System.Drawing.Point(275, -1);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button3.Name = "button3";
@@ -233,7 +236,7 @@ namespace AutoShutdown
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.button1.Location = new System.Drawing.Point(202, -1);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button1.Name = "button1";
@@ -257,7 +260,7 @@ namespace AutoShutdown
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.label3.Location = new System.Drawing.Point(186, 215);
             this.label3.Name = "label3";
@@ -268,7 +271,7 @@ namespace AutoShutdown
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.label4.Location = new System.Drawing.Point(88, 215);
             this.label4.Name = "label4";
@@ -283,7 +286,7 @@ namespace AutoShutdown
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.button2.Location = new System.Drawing.Point(238, -1);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button2.Name = "button2";

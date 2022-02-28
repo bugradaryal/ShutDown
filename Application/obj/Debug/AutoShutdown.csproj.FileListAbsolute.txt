@@ -1,0 +1,10 @@
+C:\Users\bugra\Desktop\AutoShutdown\obj\Debug\AutoShutdown.csproj.AssemblyReference.cache
+C:\Users\bugra\Desktop\AutoShutdown\obj\Debug\AutoShutdown.Main_Screen.resources
+C:\Users\bugra\Desktop\AutoShutdown\obj\Debug\AutoShutdown.Properties.Resources.resources
+C:\Users\bugra\Desktop\AutoShutdown\obj\Debug\AutoShutdown.csproj.GenerateResource.cache
+C:\Users\bugra\Desktop\AutoShutdown\obj\Debug\AutoShutdown.csproj.CoreCompileInputs.cache
+C:\Users\bugra\Desktop\AutoShutdown\bin\Debug\AutoShutdown.exe.config
+C:\Users\bugra\Desktop\AutoShutdown\bin\Debug\AutoShutdown.exe
+C:\Users\bugra\Desktop\AutoShutdown\bin\Debug\AutoShutdown.pdb
+C:\Users\bugra\Desktop\AutoShutdown\obj\Debug\AutoShutdown.exe
+C:\Users\bugra\Desktop\AutoShutdown\obj\Debug\AutoShutdown.pdb

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace AutoShutdown
@@ -36,10 +37,15 @@ namespace AutoShutdown
                 {
                     if (userControl14.Text != string.Empty || userControl15.Text != string.Empty || userControl16.Text != string.Empty)
                     {
-
                         DialogResult dialogResult = MessageBox.Show("Sayacı Başlatmak İstediğinize Eminmisiniz?", "AutoShotDown", MessageBoxButtons.YesNo);
                         if (dialogResult == DialogResult.Yes)
                         {
+                            if (int.TryParse(userControl14.Text, out _) != true && userControl14.Text != string.Empty)
+                                userControl14.Text = string.Empty;
+                            if (int.TryParse(userControl15.Text, out _) != true && userControl15.Text != string.Empty)
+                                userControl15.Text = string.Empty;
+                            if (int.TryParse(userControl16.Text, out _) != true && userControl16.Text != string.Empty)
+                                userControl16.Text = string.Empty;
                             label2.Text = "0%";
                             progressBar1.Value = 0;
                             label1.Visible = true;
@@ -95,12 +101,14 @@ namespace AutoShutdown
             {
                 tut += Convert.ToInt32(userControl16.Text) * 60 * 60 * 24; // gün den saniye x * 60 * 60 * 24
             }
+
             if (tut != 0)
             {
                 try
                 {
-                    tut = (tut*1000)/20;
-                    for (int i = 1; i <= 20; i++)
+                    tut = tut / 20;
+                    int time;
+                    for (int j = 1; j <= 20; j++)
                     {
                         if (worker.CancellationPending == true)
                         {
@@ -109,8 +117,34 @@ namespace AutoShutdown
                         }
                         else
                         {
-                            System.Threading.Thread.Sleep(tut);
-                            worker.ReportProgress(i * 5);
+                            int i = tut;
+                            while (true)
+                            {
+                                if (i > 0)
+                                {
+                                    if (worker.CancellationPending == true)
+                                    {
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        if (i >= 5)
+                                        {
+                                            i = i - 5;
+                                            time = 5;
+                                        }
+                                        else
+                                        {
+                                            time = i;
+                                            i = 0;
+                                        }
+                                        System.Threading.Thread.Sleep((time * 1000));
+                                        worker.ReportProgress(j * 5);
+                                    }
+                                }
+                                else
+                                    break;
+                            }
                         }
                     }
                 }
@@ -165,45 +199,39 @@ namespace AutoShutdown
                 */
             }
         }
-        void checkbox_ability1()
-        {
-            checkbox_no = 0;
-            checkBox6.Enabled = true;
-            checkBox5.Enabled = true;
-            checkBox4.Enabled = true;
-        }
+
         private void checkBox6_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox6.Checked == true)
             {
-                checkBox5.Enabled = false;
-                checkBox4.Enabled = false;
+                checkBox5.Checked = false;
+                checkBox4.Checked = false;
                 checkbox_no = 1;
             }
             else
-                checkbox_ability1();
+                checkbox_no = 0;
         }
         private void checkBox5_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox5.Checked == true)
             {
-                checkBox6.Enabled = false;
-                checkBox4.Enabled = false;
+                checkBox6.Checked = false;
+                checkBox4.Checked = false;
                 checkbox_no = 2;
             }
             else
-                checkbox_ability1();
+                checkbox_no = 0;
         }
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox4.Checked == true)
             {
-                checkBox6.Enabled = false;
-                checkBox5.Enabled = false;
+                checkBox6.Checked = false;
+                checkBox5.Checked = false;
                 checkbox_no = 3;
             }
             else
-                checkbox_ability1();
+                checkbox_no = 0;
         }
         void only_numbers_on_textbox(object sender, KeyPressEventArgs e)
         {
@@ -304,6 +332,22 @@ namespace AutoShutdown
             this.Show();
             notifyIcon1.Visible = false;
         }
+
+        private void userControl14_MouseClick(object sender, MouseEventArgs e)
+        {
+            userControl14.Text = string.Empty;
+        }
+
+        private void userControl15_MouseClick(object sender, MouseEventArgs e)
+        {
+            userControl15.Text = string.Empty;
+        }
+
+        private void userControl16_MouseClick(object sender, MouseEventArgs e)
+        {
+            userControl16.Text = string.Empty;
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Çıkış Yapmak İstediğinize Emin misiniz?", "Çıkış", MessageBoxButtons.YesNo);
