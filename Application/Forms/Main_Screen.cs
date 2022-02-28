@@ -172,12 +172,9 @@ namespace AutoShutdown
                 progressBar1.SetState(2);
                 label2.Text = "Stopped";
                 form_kilitle(true);
-                MessageBox.Show("acıldı");
             }
             else
             {
-                MessageBox.Show("Kpandı");
-                /*
                 label2.Text = "Done";
                 try
                 {
@@ -196,7 +193,6 @@ namespace AutoShutdown
                 }
                 catch (Exception) {}
                 Environment.Exit(1);
-                */
             }
         }
 
